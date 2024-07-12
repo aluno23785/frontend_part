@@ -1,17 +1,20 @@
 import { Component } from '@angular/core';
-import { RouterOutlet } from '@angular/router';
+import { RouterModule } from '@angular/router';
+import { HeaderComponent } from './components/header/header.component';
+
+
+import { ReadAllComponent } from './components/read-all/read-all.component';
+import { FooterComponent } from './components/footer/footer.component';
+
 
 @Component({
   selector: 'app-root',
+  templateUrl: 'app.component.html',
+  styleUrl: 'app.component.css',
   standalone: true,
-  imports: [RouterOutlet],
-  template: `
-    <h1>Welcome to {{title}}!</h1>
-
-    <router-outlet />
-  `,
-  styles: [],
+  imports: [RouterModule,HeaderComponent,FooterComponent,ReadAllComponent]
 })
+  
 export class AppComponent {
   title = 'Biblioteca-web';
 }

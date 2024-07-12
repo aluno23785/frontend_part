@@ -1,0 +1,29 @@
+img {
+    height: 3rem;
+}
+
+mat-toolbar {
+    display: flex;
+    justify-content: center;
+    /* Centraliza o conteúdo horizontalmente */
+    align-items: center;
+    /* Centraliza o conteúdo verticalmente */
+    text-align: center;
+    /* Centraliza o texto */
+}
+
+mat-toolbar span {
+    display: flex;
+    align-items: center;
+    /* Centraliza verticalmente os itens dentro do span */
+}
+
+mat-toolbar img {
+    margin-right: 10px;
+    /* Espaçamento entre a imagem e o texto */
+}
+
+mat-toolbar h1 {
+    margin: 0;
+    /* Remove a margem padrão do h1 */
+}

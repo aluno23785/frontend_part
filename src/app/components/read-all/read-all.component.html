@@ -1,0 +1,29 @@
+<button routerLink="create" mat-stroked-button color="primary">Novo Livro</button>
+<div>
+    <button mat-raised-button color="primary" [routerLink]="['/create']">Novo</button>
+
+</div>
+
+<div class="container" *ngFor="let item of list" >
+
+    <mat-card class="simple-card">
+        <mat-card-content>
+        <p>{{item.id}}</p>
+        <p>{{item.book_id}}</p>
+        <p>{{item.title}}</p>
+        <p>{{item.author}}</p>
+        <p>{{item.genre}}</p>
+
+        <div class="actions">
+            <button [routerLink]="['update',item.id]" class="edit-livro" mat-stroked-button color="primary">
+                Editar
+            </button>
+
+            <button (click)="deleteLivro(item.id)" class="delete-livro" mat-stroked-button color="warn">
+                Apagar
+            </button>
+        </div>
+        </mat-card-content>
+    </mat-card>
+
+</div>

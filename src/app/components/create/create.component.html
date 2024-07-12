@@ -1,0 +1,27 @@
+<form [formGroup]="form" (ngSubmit)="onSubmit()">
+<mat-form-field appearance="fill">
+    <mat-label>id do livro</mat-label>
+<input matInput formControlName="book_id" required>
+</mat-form-field>
+
+<mat-form-field appearance="fill">
+    <mat-label>titulo</mat-label>
+    <input matInput formControlName="title" required>
+</mat-form-field>
+
+<mat-form-field appearance="fill">
+    <mat-label>autor</mat-label>
+    <input matInput formControlName="author" required>
+</mat-form-field>
+
+<mat-form-field appearance="fill">
+    <mat-label>género</mat-label>
+    <input matInput formControlName="genre" required>
+</mat-form-field>
+
+
+<div>
+    <button mat-raised-button-color="primary" type="submit">Criar</button>
+    <button mat-raised-button-color="warn" type="button" (click)="onCancel()">Cancelar</button>
+</div>
+</form>
